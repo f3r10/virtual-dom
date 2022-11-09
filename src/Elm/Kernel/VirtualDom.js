@@ -1358,7 +1358,7 @@ function _VirtualDom_addDomNodesHelp(domNode, vNode, patches, i, low, high, even
 			}
 		}
 		// 4. this is needed for some edge cases
-		if(vKids[j].$ === __2_NODE && (childNodes[k].tagName || "").toLowerCase() !== vKids[j].__tag)
+		if(vKids[j].$ === __2_NODE && (childNodes[k].tagName || "").toLowerCase() !== (vKids[j].__tag || "").toLowerCase())
 		{
 			console.log("WARN 4: redrawing DOM")
 			_VirtualDom_applyPatchRedraw(childNodes[k], vKids[j], eventNode)
